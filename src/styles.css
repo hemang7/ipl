@@ -1,0 +1,56 @@
+.App {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: white;
+  font-size: larger;
+}
+body {
+  background-size: cover;
+  background-image: url("https://wallpapercave.com/wp/wp3264044.jpg");
+}
+
+.teams {
+  cursor: pointer;
+  background-color: #14a76c;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  margin: 1rem 0.5rem;
+  font-weight: bold;
+}
+
+.squad-container {
+  margin: auto;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 200px 200px 200px 200px;
+}
+
+.squad-list {
+  color: white;
+  padding: 1rem;
+  border: 1px solidrgba(255, 0, 0, 0.5);
+  width: 88%;
+  margin: 20px;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.ipl {
+  color: #14a76c;
+}
+
+.sort {
+  cursor: pointer;
+  background-color: #14a76c;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  margin: 1rem 0.5rem;
+  font-weight: bold;
+  position: absolute;
+  left: 1280px;
+  top: 110px;
+}
