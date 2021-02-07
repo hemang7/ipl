@@ -1,6 +1,43 @@
 import React, { useState } from "react";
 import "./styles.css";
 
+
+export default function App() {
+  const [teamSelected, setTeamSelected] = useState("DC");
+
+  function teamClickHandler(player) {
+    setTeamSelected(player);
+  }
+
+  return (
+    <div className="App">
+      <h1>🏏INDIAN PREMIER LEAGUE 🏏</h1>
+      <div>
+        {Object.keys(teams).map((player) => (
+          <button onClick={() => teamClickHandler(player)} className="teams">
+            {player}
+          </button>
+        ))}
+        <button className="sort">Sort</button>
+      </div>
+      <hr />
+      <div className="squad-container">
+        {teams[teamSelected].map((team) => (
+          <div key={team.name} className="squad-list">
+            <h2> {team.name} </h2>
+            <p className="ipl">IPL 2020</p>
+            <p style={{ fontSize: "large" }}> {team.nation} </p>
+            <div>
+              <p>Runs : {team.runs}</p>
+              <p>Wickets : {team.wickets}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 const teams = {
   DC: [
     {
@@ -1321,38 +1358,4 @@ const teams = {
     }
   ]
 };
-export default function App() {
-  const [teamSelected, setTeamSelected] = useState("DC");
 
-  function teamClickHandler(player) {
-    setTeamSelected(player);
-  }
-
-  return (
-    <div className="App">
-      <h1>🏏INDIAN PREMIER LEAGUE 🏏</h1>
-      <div>
-        {Object.keys(teams).map((player) => (
-          <button onClick={() => teamClickHandler(player)} className="teams">
-            {player}
-          </button>
-        ))}
-        <button className="sort">Sort</button>
-      </div>
-      <hr />
-      <div className="squad-container">
-        {teams[teamSelected].map((team) => (
-          <div key={team.name} className="squad-list">
-            <h2> {team.name} </h2>
-            <p className="ipl">IPL 2020</p>
-            <p style={{ fontSize: "large" }}> {team.nation} </p>
-            <div>
-              <p>Runs : {team.runs}</p>
-              <p>Wickets : {team.wickets}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
