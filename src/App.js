@@ -18,7 +18,14 @@ export default function App() {
             {player}
           </button>
         ))}
-        <button className="sort">Sort</button>
+        <select className="sort">
+          <option selected disabled>
+            Sort
+          </option>
+          <option value="Name">Name</option>
+          <option value="Runs">Runs</option>
+          <option value="Wickets">Wickets</option>
+        </select>
       </div>
       <hr />
       <div className="squad-container">
